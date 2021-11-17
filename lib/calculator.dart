@@ -24,7 +24,7 @@ class _CalculatorState extends State<Calculator> {
         child: Text(
           text,
           style: TextStyle(
-            fontSize: 30,
+            fontSize: 20,
             color: Colors.black,
             fontWeight: FontWeight.bold,
           ),
@@ -81,12 +81,12 @@ class _CalculatorState extends State<Calculator> {
         backgroundColor: Colors.grey.shade100,
         body: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.only(top: 10, left: 1, right: 1),
+            padding: const EdgeInsets.only(top: 1, left: 1, right: 1),
             child: Container(
               alignment: Alignment.bottomCenter,
               padding: EdgeInsets.only(
                 right: 14,
-                top: 10,
+                top: 5,
                 left: 14,
               ),
               child: Column(
@@ -123,7 +123,7 @@ class _CalculatorState extends State<Calculator> {
                             shape: CircleBorder(),
                             primary: Colors.red.shade100,
                             padding: EdgeInsets.symmetric(
-                                horizontal: 22, vertical: 22),
+                                horizontal: 15, vertical: 15),
                             textStyle: TextStyle(
                                 fontSize: 15, fontWeight: FontWeight.bold)),
                       ),
@@ -134,7 +134,7 @@ class _CalculatorState extends State<Calculator> {
                             shape: CircleBorder(),
                             primary: Colors.purple.shade200,
                             padding: EdgeInsets.symmetric(
-                                horizontal: 27, vertical: 27),
+                                horizontal: 15, vertical: 15),
                             textStyle: TextStyle(
                                 fontSize: 15, fontWeight: FontWeight.bold)),
                       ),
