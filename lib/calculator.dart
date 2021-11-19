@@ -14,7 +14,10 @@ class _CalculatorState extends State<Calculator> {
   Widget btn(var text) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-          shadowColor: Color.fromARGB(230, 460, 20, 1),
+          onPrimary: Colors.white,
+          onSurface: Colors.tealAccent,
+          shadowColor: Colors.orangeAccent,
+          elevation: 20,
           shape: CircleBorder(),
           primary: Color.fromRGBO(120, 100, 560, 100)),
       child: Container(
@@ -25,6 +28,7 @@ class _CalculatorState extends State<Calculator> {
           text,
           style: TextStyle(
             fontSize: 20,
+            fontStyle: FontStyle.italic,
             color: Colors.black,
             fontWeight: FontWeight.bold,
           ),
@@ -81,7 +85,7 @@ class _CalculatorState extends State<Calculator> {
         backgroundColor: Colors.grey.shade100,
         body: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.only(top: 1, left: 1, right: 1),
+            padding: const EdgeInsets.only(left: 1, right: 1, bottom: 1),
             child: Container(
               alignment: Alignment.bottomCenter,
               padding: EdgeInsets.only(
@@ -123,7 +127,7 @@ class _CalculatorState extends State<Calculator> {
                             shape: CircleBorder(),
                             primary: Colors.red.shade100,
                             padding: EdgeInsets.symmetric(
-                                horizontal: 15, vertical: 15),
+                                horizontal: 16, vertical: 16),
                             textStyle: TextStyle(
                                 fontSize: 15, fontWeight: FontWeight.bold)),
                       ),
@@ -134,14 +138,16 @@ class _CalculatorState extends State<Calculator> {
                             shape: CircleBorder(),
                             primary: Colors.purple.shade200,
                             padding: EdgeInsets.symmetric(
-                                horizontal: 15, vertical: 15),
+                                horizontal: 18, vertical: 18),
                             textStyle: TextStyle(
                                 fontSize: 15, fontWeight: FontWeight.bold)),
                       ),
-                      btn(
-                        "%",
+                      Expanded(
+                        child: btn(
+                          "%",
+                        ),
                       ),
-                      btn("/"),
+                      Expanded(child: btn("/")),
                     ],
                   ),
                   Padding(
@@ -211,6 +217,7 @@ class _CalculatorState extends State<Calculator> {
                             child: Text('='),
                             onPressed: output,
                             style: ElevatedButton.styleFrom(
+                                shadowColor: Colors.deepOrange.shade900,
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(20)),
                                 primary: Colors.orange.shade100,
